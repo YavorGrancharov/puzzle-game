@@ -13,7 +13,6 @@ function Loader(loader) {
 
             this.starter.load((loader, resources) => {
                 Globals.resources = resources;
-                console.log(Globals)
                 resolve();
             });
 
