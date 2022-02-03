@@ -9,6 +9,9 @@ const LoaderConfig = {
     7: require('../sprites/7.png'),
     8: require('../sprites/8.png'),
     9: require('../sprites/9.png'),
+
+    click: require('../sounds/click.mp3'),
+    music: require('../sounds/music.mp3'),
 };
 
 export default LoaderConfig;
