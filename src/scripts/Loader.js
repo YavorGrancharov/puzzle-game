@@ -16,11 +16,6 @@ Loader.prototype.preload = function () {
             Globals.resources = resources;
             resolve();
         });
-
-        this.starter.onError.add((err) => {
-            console.error(err);
-            reject(err);
-        });
     });
 };
 
