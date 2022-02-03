@@ -1,11 +1,22 @@
 import * as PIXI from 'pixi.js';
+import PIXI_SOUND from 'pixi-sound';
 
 import Globals from './Globals';
 import PuzzleGrid from './PuzzleGrid';
 
 function MainScene() {
     this.container = new PIXI.Container();
-    Globals.resources.music.sound.play({loop: true, volume: 0.1});
+    PIXI_SOUND.Sound.from({
+        url: Globals.resources.music,
+        loop: true,
+        preload: true,
+        autoPlay: true,
+        volume: 0.1,
+        loaded: function (err, sound) {
+            sound.play();
+        },
+    });
+
     this.createBackground();
     this.createGrid();
 }
